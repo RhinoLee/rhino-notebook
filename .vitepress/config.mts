@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/rhino-notebook/',
   title: "Rhino Notebook",
   description: "Rhino Notebook",
   themeConfig: {
