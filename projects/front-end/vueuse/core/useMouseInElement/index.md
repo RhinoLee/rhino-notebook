@@ -6,6 +6,13 @@ category: Elements
 
 Reactive mouse position related to an element
 
+## Demo
+<script setup>
+import Demo from './demo.vue'
+</script>
+
+<Demo />
+
 ## Usage
 
 ```vue

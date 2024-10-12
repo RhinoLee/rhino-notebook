@@ -6,6 +6,13 @@ category: Sensors
 
 Reactive [DeviceOrientationEvent](https://developer.mozilla.org/en-US/docs/Web/API/DeviceOrientationEvent). Provide web developers with information from the physical orientation of the device running the web page.
 
+## Demo
+<script setup>
+import Demo from './demo.vue'
+</script>
+
+<Demo />
+
 ## Usage
 
 ```js

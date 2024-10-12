@@ -4,27 +4,27 @@ layout: home
 
 hero:
   name: "Rhino Notebook"
-  text: ""
-  tagline:
+  text: Test<br>Subtitle
+  tagline: Test tagline
   image:
     src: /logo.jpg
     alt: Rhino
   actions:
     - theme: brand
       text: Front-end
-      link: /projects/front-end/index
+      link: /front-end/index
     - theme: alt
       text: Back-end
-      link: /projects/back-end/index
+      link: /back-end/index
     - theme: alt
       text: Software
-      link: /projects/software/index
+      link: /software/index
     - theme: alt
       text: Cooking
-      link: /projects/cooking/index
+      link: /cooking/index
     - theme: alt
       text: Books
-      link: /projects/books/index
+      link: /books/index
 
 # features:
 #   - title: Feature A

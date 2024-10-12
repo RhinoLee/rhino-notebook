@@ -6,6 +6,13 @@ category: Component
 
 Mounted state in ref.
 
+## Demo
+<script setup>
+import Demo from './demo.vue'
+</script>
+
+<Demo />
+
 ## Usage
 
 ```js
