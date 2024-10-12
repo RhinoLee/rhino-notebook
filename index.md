@@ -12,19 +12,19 @@ hero:
   actions:
     - theme: brand
       text: Front-end
-      link: /front-end/index
+      link: /projects/front-end/index
     - theme: alt
       text: Back-end
-      link: /back-end/index
+      link: /projects/back-end/index
     - theme: alt
       text: Software
-      link: /software/index
+      link: /projects/software/index
     - theme: alt
       text: Cooking
-      link: /cooking/index
+      link: /projects/cooking/index
     - theme: alt
       text: Books
-      link: /books/index
+      link: /projects/books/index
 
 # features:
 #   - title: Feature A
