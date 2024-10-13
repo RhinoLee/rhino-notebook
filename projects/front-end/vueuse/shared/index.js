@@ -1,4 +1,4 @@
-import { unref } from 'vue'
+import { computed, unref } from 'vue'
 
 export const isClient = typeof window !== 'undefined' && typeof document !== 'undefined'
 export const defaultWindow = isClient ? window : undefined
@@ -29,4 +29,18 @@ export function resolveElement(el) {
     return el.documentElement
 
   return el
+}
+
+/**
+ * Converts plain function into a reactive function.
+ * The converted function accepts refs as it's arguments
+ * and returns a ComputedRef, with proper typing.
+ *
+ * @param fn - Source function
+ */
+export function reactify(fn, options) {
+  const unrefFn = options?.computedGetter === false ? unref : toValue
+  return function (...args) {
+    return computed(() => fn.apply(this, args.map(i => unrefFn(i))))
+  }
 }

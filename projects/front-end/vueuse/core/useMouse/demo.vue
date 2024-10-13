@@ -1,12 +1,12 @@
 <script setup>
-import { useMouse } from './'
-// import { stringify } from '@vueuse/docs-utils'
+import { stringify } from '@vueuse-practice/docs-utils'
 import { reactive, ref } from 'vue'
+import { useMouse } from './'
 
 const demoContainer = ref(null)
 
 const mouseDefault = reactive(useMouse())
-// const textDefault = stringify(mouseDefault)
+const textDefault = stringify(mouseDefault)
 
 function extractor(event) {
   if (typeof Touch !== 'undefined' && event instanceof Touch)
@@ -16,14 +16,14 @@ function extractor(event) {
 }
 
 const mouseWithExtractor = reactive(useMouse({ target: demoContainer, type: extractor }))
-// const textWithExtractor = stringify(mouseWithExtractor)
+const textWithExtractor = stringify(mouseWithExtractor)
 </script>
 
 <template>
   <div ref="demoContainer">
     <p>Basic Usage</p>
-    <pre lang="yaml">{{ mouseDefault }}</pre>
+    <pre lang="yaml">{{ textDefault }}</pre>
     <p>Extractor Usage</p>
-    <pre lang="yaml">{{ mouseWithExtractor }}</pre>
+    <pre lang="yaml">{{ textWithExtractor }}</pre>
   </div>
 </template>

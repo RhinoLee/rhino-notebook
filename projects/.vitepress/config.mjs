@@ -49,5 +49,10 @@ export default defineConfig({
         transformer: 'vue3',
       }),
     ],
+    resolve: {
+      alias: {
+        '@vueuse-practice/docs-utils': resolve(__dirname, 'plugins/utils.js'),
+      },
+    },
   },
 })
