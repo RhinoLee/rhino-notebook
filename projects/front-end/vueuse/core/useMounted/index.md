@@ -12,7 +12,9 @@ Mounted state in ref.
 import Demo from './demo.vue'
 </script>
 
-<Demo />
+<DemoContainer>
+  <Demo />
+</DemoContainer>
 
 ## Usage
 

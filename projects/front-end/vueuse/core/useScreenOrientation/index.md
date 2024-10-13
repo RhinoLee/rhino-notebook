@@ -12,7 +12,9 @@ Reactive [Screen Orientation API](https://developer.mozilla.org/en-US/docs/Web/A
 import Demo from './demo.vue'
 </script>
 
-<Demo />
+<DemoContainer>
+  <Demo />
+</DemoContainer>
 
 ## Usage
 

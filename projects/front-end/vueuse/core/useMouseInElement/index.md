@@ -12,7 +12,9 @@ Reactive mouse position related to an element
 import Demo from './demo.vue'
 </script>
 
-<Demo />
+<DemoContainer>
+  <Demo />
+</DemoContainer>
 
 ## Usage
 

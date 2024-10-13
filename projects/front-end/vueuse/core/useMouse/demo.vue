@@ -20,7 +20,7 @@ const mouseWithExtractor = reactive(useMouse({ target: demoContainer, type: extr
 </script>
 
 <template>
-  <div ref="demoContainer" class="demo wide">
+  <div ref="demoContainer">
     <p>Basic Usage</p>
     <pre lang="yaml">{{ mouseDefault }}</pre>
     <p>Extractor Usage</p>

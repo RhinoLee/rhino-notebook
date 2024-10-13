@@ -14,7 +14,9 @@ import Demo from './demo.vue'
 
 This is a .md using a custom component
 
-<Demo />
+<DemoContainer>
+  <Demo />
+</DemoContainer>
 
 ## Usage
 

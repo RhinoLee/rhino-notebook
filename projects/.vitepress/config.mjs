@@ -1,19 +1,21 @@
-import { defineConfig } from 'vitepress'
+import { resolve } from 'node:path'
 import UnoCSS from 'unocss/vite'
+import Components from 'unplugin-vue-components/vite'
+import { defineConfig } from 'vitepress'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   base: '/rhino-notebook/',
-  title: "Rhino Notebook",
-  description: "Rhino Notebook",
+  title: 'Rhino Notebook',
+  description: 'Rhino Notebook',
   themeConfig: {
     // https://vitepress.dev/reference/default-theme-config
     search: {
-      provider: 'local'
+      provider: 'local',
     },
     nav: [
       { text: 'Home', link: '/' },
-      { text: 'Examples', link: '/markdown-examples' }
+      { text: 'Examples', link: '/markdown-examples' },
     ],
 
     sidebar: {
@@ -29,18 +31,23 @@ export default defineConfig({
             { text: 'useScreenOrientation', link: '/front-end/vueuse/core/useScreenOrientation/index' },
             { text: 'useDeviceOrientation', link: '/front-end/vueuse/core/useDeviceOrientation/index' },
             { text: 'useParallax', link: '/front-end/vueuse/core/useParallax/index' },
-          ]
-        }
+          ],
+        },
       ],
     },
 
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/RhinoLee' }
-    ]
+      { icon: 'github', link: 'https://github.com/RhinoLee' },
+    ],
   },
   vite: {
     plugins: [
       UnoCSS(),
+      Components({
+        dirs: resolve(__dirname, 'theme/components'),
+        include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+        transformer: 'vue3',
+      }),
     ],
   },
 })
