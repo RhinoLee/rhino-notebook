@@ -5,15 +5,15 @@ const { isSupported, orientation, angle } = useScreenOrientation()
 </script>
 
 <template>
-  <!-- <note class="mb-2">
+  <note class="mb-2">
     For best results, please use a mobile or tablet device (or use your browser's native inspector to simulate an
     orientation change)
-  </note> -->
+  </note>
   <div>
     isSupported: {{ isSupported }}
-    <!-- isSupported: <boolean-display :value="isSupported">
+    isSupported: <boolean-display :value="isSupported">
       {{ isSupported }}
-    </boolean-display> -->
+    </boolean-display>
   </div>
   <div>Orientation Type: <b>{{ orientation }}</b></div>
   <div>Orientation Angle: <b>{{ angle }}</b></div>
