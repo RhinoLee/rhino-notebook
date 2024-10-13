@@ -1,7 +1,7 @@
 import { ref } from 'vue'
 import { defaultWindow } from '../../shared'
-import { useSupported } from '../useSupported'
 import { useEventListener } from '../useEventListener'
+import { useSupported } from '../useSupported'
 
 export function useDeviceOrientation(options = {}) {
   const { window = defaultWindow } = options

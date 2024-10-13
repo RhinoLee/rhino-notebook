@@ -7,6 +7,7 @@ category: Sensors
 Reactive mouse position
 
 ## Demo
+
 <script setup>
 import Demo from './demo.vue'
 </script>
@@ -37,16 +38,15 @@ const { x, y } = useMouse({ touch: false })
 It's also possible to provide a custom extractor function to get the position from the event.
 
 ```js twoslash
-import type { UseMouseEventExtractor } from '@vueuse/core'
 import { useMouse, useParentElement } from '@vueuse/core'
 
 const parentEl = useParentElement()
 
-const extractor: UseMouseEventExtractor = event => (
-  event instanceof Touch
+function extractor(event) {
+  return event instanceof Touch
     ? null
     : [event.offsetX, event.offsetY]
-)
+}
 
 const { x, y, sourceType } = useMouse({ target: parentEl, type: extractor })
 ```

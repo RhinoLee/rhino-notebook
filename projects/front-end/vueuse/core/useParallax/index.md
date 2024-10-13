@@ -7,6 +7,7 @@ category: Sensors
 Create parallax effect easily. It uses `useDeviceOrientation` and fallback to `useMouse` if orientation is not supported.
 
 ## Demo
+
 <script setup>
 import Demo from './demo.vue'
 </script>

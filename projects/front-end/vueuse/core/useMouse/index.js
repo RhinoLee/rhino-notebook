@@ -1,6 +1,6 @@
 import { ref } from 'vue'
-import { useEventListener } from '../useEventListener/index'
 import { defaultWindow } from '../../shared/index'
+import { useEventListener } from '../useEventListener/index'
 
 const UseMouseBuiltinExtractors = {
   page: event => [event.pageX, event.pageY],

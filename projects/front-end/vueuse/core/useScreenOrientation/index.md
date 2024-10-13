@@ -7,6 +7,7 @@ category: Browser
 Reactive [Screen Orientation API](https://developer.mozilla.org/en-US/docs/Web/API/Screen_Orientation_API). It provides web developers with information about the user's current screen orientation.
 
 ## Demo
+
 <script setup>
 import Demo from './demo.vue'
 </script>

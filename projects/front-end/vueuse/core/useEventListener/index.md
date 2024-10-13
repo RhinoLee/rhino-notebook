@@ -18,15 +18,6 @@ useEventListener(document, 'visibilitychange', (evt) => {
 
 You can also pass a ref as the event target, `useEventListener` will unregister the previous event and register the new one when you change the target.
 
-```ts
-import { useEventListener } from '@vueuse/core'
-
-const element = ref<HTMLDivElement>()
-useEventListener(element, 'keydown', (e) => {
-  console.log(e.key)
-})
-```
-
 ```vue
 <template>
   <div v-if="cond" ref="element">

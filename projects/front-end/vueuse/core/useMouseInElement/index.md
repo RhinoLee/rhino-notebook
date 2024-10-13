@@ -7,6 +7,7 @@ category: Elements
 Reactive mouse position related to an element
 
 ## Demo
+
 <script setup>
 import Demo from './demo.vue'
 </script>
@@ -17,8 +18,8 @@ import Demo from './demo.vue'
 
 ```vue
 <script setup>
-import { useMouseInElement } from './'
 import { ref } from 'vue'
+import { useMouseInElement } from './'
 
 const target = ref(null)
 

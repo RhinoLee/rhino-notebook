@@ -1,8 +1,8 @@
 import { computed, reactive } from 'vue'
+import { defaultWindow } from '../../shared'
 import { useDeviceOrientation } from '../useDeviceOrientation'
 import { useMouseInElement } from '../useMouseInElement'
 import { useScreenOrientation } from '../useScreenOrientation'
-import { defaultWindow } from '../../shared'
 
 export function useParallax(target, options = {}) {
   const {

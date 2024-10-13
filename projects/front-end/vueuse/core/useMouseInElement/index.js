@@ -1,7 +1,7 @@
 import { ref, watch } from 'vue'
 import { defaultWindow, unrefElement } from '../../shared'
-import { useMouse } from '../useMouse'
 import { useEventListener } from '../useEventListener'
+import { useMouse } from '../useMouse'
 
 export function useMouseInElement(target, options = {}) {
   const {

@@ -8,7 +8,7 @@ const demoContainer = ref(null)
 const mouseDefault = reactive(useMouse())
 // const textDefault = stringify(mouseDefault)
 
-const extractor = (event) => {
+function extractor(event) {
   if (typeof Touch !== 'undefined' && event instanceof Touch)
     return null
   else
@@ -20,7 +20,7 @@ const mouseWithExtractor = reactive(useMouse({ target: demoContainer, type: extr
 </script>
 
 <template>
-  <div class="demo wide" ref="demoContainer">
+  <div ref="demoContainer" class="demo wide">
     <p>Basic Usage</p>
     <pre lang="yaml">{{ mouseDefault }}</pre>
     <p>Extractor Usage</p>
