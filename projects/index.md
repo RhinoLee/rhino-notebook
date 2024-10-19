@@ -7,7 +7,7 @@ hero:
   text: Test<br>Subtitle
   tagline: Test tagline
   image:
-    src: /logo.jpg
+    src: /logo.png
     alt: Rhino
   actions:
     - theme: brand

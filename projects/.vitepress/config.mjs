@@ -33,6 +33,12 @@ export default defineConfig({
             { text: 'useParallax', link: '/front-end/vueuse/core/useParallax/index' },
           ],
         },
+        {
+          text: 'FP',
+          items: [
+            { text: 'chapter_01', link: '/front-end/fp/chapter_01/index' },
+          ],
+        },
       ],
     },
 
