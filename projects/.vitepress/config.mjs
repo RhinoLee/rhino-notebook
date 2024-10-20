@@ -40,6 +40,27 @@ export default defineConfig({
           ],
         },
       ],
+      '/back-end/': [
+        {
+          text: 'Python',
+          items: [
+            {
+              text: 'Learn Python for Yourself',
+              collapsed: true,
+              items: [
+                { text: 'Sequence Unpacking', link: '/back-end/python/learn-python-for-yourself/sequence-unpacking/index' },
+                {
+                  text: 'List',
+                  collapsed: true,
+                  items: [
+                    { text: 'List Comprehension', link: '/back-end/python/learn-python-for-yourself/list/list-comprehension/index' },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+      ],
     },
 
     socialLinks: [
