@@ -36,7 +36,7 @@ export default defineConfig({
         {
           text: 'FP',
           items: [
-            { text: 'basic', link: '/front-end/fp/basic/index' },
+            { text: 'Chapter 1 ~ 5', link: '/front-end/fp/basic/index' },
           ],
         },
       ],
