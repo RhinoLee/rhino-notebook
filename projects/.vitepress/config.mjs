@@ -37,6 +37,7 @@ export default defineConfig({
           text: 'FP',
           items: [
             { text: 'Chapter 1 ~ 5', link: '/front-end/fp/basic/index' },
+            { text: 'immutability', link: '/front-end/fp/basic/immutability' },
           ],
         },
       ],
@@ -54,6 +55,13 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'List Comprehension', link: '/back-end/python/learn-python-for-yourself/list/list-comprehension/index' },
+                  ],
+                },
+                {
+                  text: 'Dictionary',
+                  collapsed: true,
+                  items: [
+                    { text: 'Dictionary Comprehension', link: '/back-end/python/learn-python-for-yourself/dictionary/dictionary-comprehension/index' },
                   ],
                 },
               ],

@@ -4,7 +4,7 @@
 
 https://pythonbook.cc/chapters/basic/list#%E4%B8%B2%E5%88%97%E6%8E%A8%E5%B0%8E%E5%BC%8F
 
-## 用途
+## Practice
 
 一堆資料 -> 經過某些處理 -> 變成另一堆資料，有點像 JS 的 map
 
@@ -18,7 +18,7 @@ https://pythonbook.cc/chapters/basic/list#%E4%B8%B2%E5%88%97%E6%8E%A8%E5%B0%8E%E
 [ n for n in range(1, 11) if n % 2 == 0 ] # [2, 4 ,6 , 8, 10]
 ```
 
-## 跟 for 迴圈的差異
+### 跟 for 迴圈的差異
 
 迴圈裡的變數在 for 迴圈結束後，依然可以正常存取
 

@@ -1,4 +1,4 @@
-# Functional Programming Chapter 1 ~ 5
+# Chapter 1 ~ 5
 
 ## Source
 
