@@ -36,8 +36,9 @@ export default defineConfig({
         {
           text: 'FP',
           items: [
-            { text: 'Chapter 1 ~ 5', link: '/front-end/fp/basic/index' },
-            { text: 'immutability', link: '/front-end/fp/basic/immutability' },
+            { text: 'chapter 1 ~ 5', link: '/front-end/fp/basic/index' },
+            { text: 'chapter 6 ~ 7 - immutability', link: '/front-end/fp/basic/immutability' },
+            { text: 'chapter 8 - stratified design', link: '/front-end/fp/basic/stratifiedDesign' },
           ],
         },
       ],
@@ -62,6 +63,13 @@ export default defineConfig({
                   collapsed: true,
                   items: [
                     { text: 'Dictionary Comprehension', link: '/back-end/python/learn-python-for-yourself/dictionary/dictionary-comprehension/index' },
+                  ],
+                },
+                {
+                  text: 'Function',
+                  collapsed: true,
+                  items: [
+                    { text: 'Basics', link: '/back-end/python/learn-python-for-yourself/function/basics/index' },
                   ],
                 },
               ],
