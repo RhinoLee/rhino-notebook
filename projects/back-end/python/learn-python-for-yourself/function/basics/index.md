@@ -47,3 +47,10 @@ def add_to_box(a, b, box=None):
 add_to_box(1, 4) # [1, 4]
 add_to_box(5, 0) # [5, 0]
 ```
+
+## lambda
+
+```python
+add = lambda a, b: a + b
+add(1, 2) # 3
+```
