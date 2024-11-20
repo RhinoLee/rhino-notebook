@@ -40,4 +40,6 @@ function add_element_last(array, el) {
 - 資料離開安全區前先複製
 - 資料離開或進入安全區皆複製
 
+::: tip
 安全區的定義：受信任的函式，在安全區中資料都是 Immutable。
+:::

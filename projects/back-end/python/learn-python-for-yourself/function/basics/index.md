@@ -54,3 +54,7 @@ add_to_box(5, 0) # [5, 0]
 add = lambda a, b: a + b
 add(1, 2) # 3
 ```
+
+## Closure
+
+運作原理 source：https://pythonbook.cc/chapters/basic/function-advanced#%E9%81%8B%E4%BD%9C%E5%8E%9F%E7%90%86

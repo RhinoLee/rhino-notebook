@@ -41,6 +41,12 @@ export default defineConfig({
             { text: 'chapter 8 - stratified design', link: '/front-end/fp/basic/stratifiedDesign' },
           ],
         },
+        {
+          text: 'Micro Frontend',
+          items: [
+            { text: 'chapter 1', link: '/front-end/micro-frontend/basic/index' },
+          ],
+        },
       ],
       '/back-end/': [
         {
