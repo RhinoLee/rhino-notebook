@@ -45,6 +45,7 @@ export default defineConfig({
           text: 'Micro Frontend',
           items: [
             { text: 'chapter 1', link: '/front-end/micro-frontend/basic/index' },
+            { text: 'Web Components', link: '/front-end/micro-frontend/web-components/index' },
           ],
         },
       ],
