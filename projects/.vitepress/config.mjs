@@ -21,8 +21,9 @@ export default defineConfig({
     sidebar: {
       '/front-end/': [
         {
-          text: 'VueUse',
+          text: 'VueUse 鐵人賽 Demo',
           items: [
+            { text: '鐵人賽原文', link: 'https://ithelp.ithome.com.tw/users/20169419/ironman' },
             { text: 'useEventListener', link: '/front-end/vueuse/core/useEventListener/index' },
             { text: 'useMouse', link: '/front-end/vueuse/core/useMouse/index' },
             { text: 'useMouseInElement', link: '/front-end/vueuse/core/useMouseInElement/index' },
