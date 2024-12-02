@@ -117,8 +117,8 @@ Shadow DOM 在 event bubbling 的行為會有所不同，使用時需注意。
 
 情境：在主頁面商品中切換商品版本，要能向下傳遞到頁面區塊（此處為購買按鈕），區塊才能更新狀態（改變購買按鈕上的顯示售價）。
 
-- 決策團隊負責主頁面商品
-- 結帳團隊負責購買按鈕
+- 決策團隊：負責主頁面商品
+- 結帳團隊：負責購買按鈕
 
 結帳團隊爲購買按鈕加入 edition 屬性：
 
@@ -160,3 +160,98 @@ class CheckoutBuy extends HTMLElement {
 ### 頁面區塊對主頁面
 
 情境：在點擊購買按鈕後，主頁面會跳出「成功加入購物車」的動畫。
+
+- 結帳團隊：負責購買按鈕按下後通知主頁面。
+- 決策團隊：負責在收到通知時，讓主頁面跳出「成功加入購物車」動畫。
+
+#### 傳遞自定義事件
+
+目標：在購買按鈕被點擊時，像外傳遞 checkout:item_added 自定義事件。
+
+**使用瀏覽器原生的 CustomEvents API**
+
+```javascript
+class CheckoutBuy extends HTMLElement {
+  // ...
+
+  render() {
+    // ...
+    this.innerHTML = `<button>...略</button>`
+
+    this.querySelector('button').addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('checkout:item_added'))
+    })
+  }
+}
+```
+
+以上是結帳團隊負責的部分，接下來換決策團隊要來監聽這個事件，並觸發「成功加入購物車」動畫。
+
+```javascript
+// 產品頁
+const buyButton = document.querySelector('checkout-buy')
+const animationElement = document.querySelector('animation-element')
+
+buyButton.addEventListener('checkout:item_added', (e) => {
+  animationElement.classList.add('active')
+})
+```
+
+### 頁面區塊對頁面區塊
+
+情境：結帳團隊要開發一個迷你購物籃區塊，讓決策團隊可以嵌入到產品頁底部。
+當客戶按下購買按鈕，在購物籃中加入新商品時，迷你購物籃也需要收到通知。
+
+也就是說要讓頁面區塊 A 裡面（checkout-buy）的事件來觸發頁面區塊 B （迷你購物籃區塊）的更新。
+
+目標：使用 broadcasting 的方式，透過發布/訂閱機制，讓迷你購物籃訂閱購買按鈕要發布的通知，且產品頁完全不需要知道他們之間的溝通。
+
+有兩種方式可以達成 broadcasting 的功能：
+
+- 透過 DOM 達成 broadcasting 效果
+- 使用瀏覽器 Broadcast Channel API
+
+#### 透過 DOM 達成 broadcasting 效果
+
+```javascript
+class CheckoutBuy extends HTMLElement {
+  // ...
+
+  render() {
+    // ...
+    this.innerHTML = `<button>...略</button>`
+
+    this.querySelector('button').addEventListener('click', () => {
+      this.dispatchEvent(new CustomEvent('checkout:item_added', {
+        bubbles: true, // 因為要讓事件往上傳到 window，要把事件冒泡打開
+        detail: { sku, edition }, // 要透過事件傳出去的 payload
+      }))
+    })
+  }
+}
+```
+
+```javascript
+class CheckoutMiniCart extends HTMLElement {
+  connectedCallback() {
+    this.items = [] // 初始化區域變數，記錄購物籃內的商品
+    window.addEventListener('checkout:item_added', (e) => {
+      this.items.push(e.detail) // 讀取事件 payload，更新到購物籃內
+      this.render() // 更新畫面
+    })
+
+    this.render()
+  }
+
+  render() {
+    // 透過 items render 迷你購物籃
+    this.innerHTML = `...略`
+  }
+}
+```
+
+概念是把 CustomEvent 的 bubbles option 打開，讓區塊事件可以一路往上傳到 window，其他區塊透過 window.addEventListener 來接收通知。
+
+:::tip
+範例中是使用 this.dispatchEvent，也可以換成 window.dispatchEvent，直接在 window 物件上發送事件，但缺點是找不到事件的源頭。
+:::
