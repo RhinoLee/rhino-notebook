@@ -255,3 +255,17 @@ class CheckoutMiniCart extends HTMLElement {
 :::tip
 範例中是使用 this.dispatchEvent，也可以換成 window.dispatchEvent，直接在 window 物件上發送事件，但缺點是找不到事件的源頭。
 :::
+
+#### 使用 Broadcast Channel API 達成 broadcasting 效果
+
+讓同一個網域下的頁籤、視窗、iframe 都可以互相溝通
+
+- 連接頻道：`const bc = new BroadcastChannel("test_channel");`
+- 發送訊息：`bc.postMessage("test message");`
+- 接收訊息：
+
+  ```javascript
+  bc.onmessage = (event) => {
+    console.log(event)
+  }
+  ```
