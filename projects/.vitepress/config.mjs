@@ -49,6 +49,12 @@ export default defineConfig({
             { text: 'Web Components', link: '/front-end/micro-frontend/web-components/index' },
           ],
         },
+        {
+          text: 'CSS',
+          items: [
+            { text: 'scroll-state()', link: '/front-end/css/scroll-state/index' },
+          ],
+        },
       ],
       '/back-end/': [
         {
