@@ -13,7 +13,7 @@ Chrome 133 以上支援，目前需要先使用 Chrome Beta。
 卡住狀態：當元素卡在邊緣時，觸發樣式變更。
 
 <script setup>
-import Demo from './demo.vue'
+import Demo from './Demo.vue'
 </script>
 
 <DemoContainer>
