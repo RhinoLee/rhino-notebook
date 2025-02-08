@@ -30,7 +30,7 @@
       transition: box-shadow 0.3s ease;
       @container scroll-state(stuck: top) {
         background: #fff;
-        color: HighlightText;
+        color: red;
         box-shadow: var(--shadow-5);
       }
     }

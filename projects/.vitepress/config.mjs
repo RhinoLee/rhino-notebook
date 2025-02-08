@@ -53,6 +53,7 @@ export default defineConfig({
           text: 'CSS',
           items: [
             { text: 'scroll-state()', link: '/front-end/css/scroll-state/index' },
+            { text: 'logical-properties-and-values', link: '/front-end/css/logical-properties-and-values/index' },
           ],
         },
       ],
