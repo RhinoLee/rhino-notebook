@@ -30,3 +30,14 @@ source：https://css-tricks.com/css-logical-properties-and-values/
 :::warning
 當 writing-mode 改變時，inline、block 的方向可能會對調。
 :::
+
+在 left-to-right 的語言中，`margin-inline-start` 會把 marging 設定在左邊；
+在 right-to-left 的語言中，`margin-inline-start` 會把 marging 設定在右邊；
+
+<script setup>
+import MarginInlineStartDemo from './MarginInlineStartDemo.vue'
+</script>
+
+<DemoContainer>
+  <MarginInlineStartDemo />
+</DemoContainer>
