@@ -54,6 +54,7 @@ export default defineConfig({
           items: [
             { text: 'scroll-state()', link: '/front-end/css/scroll-state/index' },
             { text: 'logical-properties-and-values', link: '/front-end/css/logical-properties-and-values/index' },
+            { text: 'interpolate-size-and-calc-size', link: '/front-end/css/interpolate-size-and-calc-size/index' },
           ],
         },
       ],
