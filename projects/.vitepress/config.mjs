@@ -39,7 +39,8 @@ export default defineConfig({
           items: [
             { text: 'chapter 1 ~ 5', link: '/front-end/fp/basic/index' },
             { text: 'chapter 6 ~ 7 - immutability', link: '/front-end/fp/basic/immutability' },
-            { text: 'chapter 8 - stratified design', link: '/front-end/fp/basic/stratifiedDesign' },
+            { text: 'chapter 8 ~ 9 - stratified design', link: '/front-end/fp/basic/stratifiedDesign' },
+            { text: 'chapter 10 ~ 11 - first-class objects', link: '/front-end/fp/basic/firstClassObjects' },
           ],
         },
         {
