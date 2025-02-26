@@ -58,6 +58,12 @@ export default defineConfig({
             { text: 'interpolate-size-and-calc-size', link: '/front-end/css/interpolate-size-and-calc-size/index' },
           ],
         },
+        {
+          text: 'Nuxt',
+          items: [
+            { text: 'Directory Structure', link: '/front-end/nuxt/directory-structure/index' },
+          ],
+        },
       ],
       '/back-end/': [
         {
