@@ -75,4 +75,11 @@ const { $doSomething } = useNuxtApp()
 ### Plugins - use
 
 如果遇到沒有 Nuxt 版本的 Vue plugin，可以使用 `use`。
+
 source: https://nuxt.com/docs/guide/directory-structure/plugins#vue-plugins
+
+### Plugins - 指定 client 或 server
+
+可以透過檔名來指定 plugin 要在 client 或 server 被執行。
+
+EX：`doSomething.client.js`、`doSomething.server.js`
