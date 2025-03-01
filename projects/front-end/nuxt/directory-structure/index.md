@@ -153,7 +153,7 @@ export default defineEventHandler((event) => {
 })
 ```
 
-url：http://localhost:3000/api/hello
+url：`http://localhost:3000/api/hello`
 
 ```json
 {
@@ -184,7 +184,7 @@ export default defineEventHandler((event) => {
 })
 ```
 
-url：http://localhost:3000/hello
+url：`http://localhost:3000/hello`
 
 ```json
 {
