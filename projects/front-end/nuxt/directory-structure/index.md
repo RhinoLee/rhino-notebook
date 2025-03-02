@@ -211,3 +211,65 @@ export default defineEventHandler((event) => {
   console.log('取得 request 資料', event.node.req)
 })
 ```
+
+## SEO
+
+### Global Meta
+
+source：https://nuxt.com/docs/api/nuxt-config#head
+
+### Page Meta
+
+有以下幾種方式可以使用：
+
+- composable
+  - useHead
+  - useSeoMeta
+  - useServerSeoMeta
+- SEO Meta Components：https://nuxt.com/docs/getting-started/seo-meta#components
+
+useSeoMeta、useServerSeoMeta 有更好的 TS 支援。
+
+#### useHead composable
+
+`tagPosition` 可以設定 meta tag 的位置，預設是在 head。
+source：https://nuxt.com/docs/getting-started/seo-meta#body-tags
+
+```vue
+<script setup>
+// pages/about.vue
+
+useHead({
+  title: 'About',
+  meta: [
+    { property: 'og:title', content: 'About' },
+  ],
+  script: [
+    {
+      src: 'https://third-party-script.com',
+      // valid options are: 'head' | 'bodyClose' | 'bodyOpen'
+      tagPosition: 'bodyClose'
+    }
+  ]
+})
+</script>
+```
+
+#### useSeoMeta：
+
+寫法比 useHead 更簡潔。
+
+```vue
+<script setup>
+// pages/about.vue
+
+useSeoMeta({
+  title: 'About',
+  ogTitle: 'About',
+})
+</script>
+```
+
+#### useServerSeoMeta：
+
+跟 useSeoMeta 的差異是：useServerSeoMeta 的設定會讓爬蟲看到，但不會改變 client 端的 meta。
