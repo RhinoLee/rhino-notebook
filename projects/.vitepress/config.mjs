@@ -62,6 +62,7 @@ export default defineConfig({
           text: 'Nuxt',
           items: [
             { text: 'Directory Structure', link: '/front-end/nuxt/directory-structure/index' },
+            { text: 'Data Fetching', link: '/front-end/nuxt/data-fetching/index' },
           ],
         },
       ],
