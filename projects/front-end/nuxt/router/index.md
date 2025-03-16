@@ -51,3 +51,13 @@ source: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/a#security_and
   > 這就是為什麼 rel="noopener" 如此重要 - 它切斷了新打開頁面與原始頁面之間的 JavaScript 連接，使得惡意網站無法通過 window.opener 訪問和操作原始頁面。<br>
 
 - `noreferrer`：防止新開的視窗可以透過 `referrer` header 存取原本的視窗。
+
+## `useRoute` & `useRouter`
+
+- source: https://nuxt.com/docs/api/composables/use-route
+- source: https://nuxt.com/docs/api/composables/use-router
+
+## `Nested Routes` & `Dynamic Nested Routes`
+
+- source: https://nuxt.com/docs/guide/directory-structure/pages#dynamic-routes
+- source: https://nuxt.com/docs/guide/directory-structure/pages#nested-routes
